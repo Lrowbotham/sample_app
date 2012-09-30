@@ -8,7 +8,7 @@ subject { page }
 
 		before { visit root_path }
 
-		it { should have_selector('h1', text:'Sample App') }
+		it { should have_selector('h1', text:' ') }
 		it { should have_selector('title', text: "Ruby on Rails Tutorial Sample App") }
 		it { should_not have_selector('title', text: '| Home') }
 	end
