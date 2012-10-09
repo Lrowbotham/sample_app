@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 55px;
 }
 
 section {
@@ -62,7 +62,6 @@ p {
   line-height: 1.7em;
 }
 
-
 /* header */
 
 #logo {
@@ -79,6 +78,25 @@ p {
     color: white;
     text-decoration: none;
   }
+}
+
+
+/* HOME PAGE HERO UNIT BODY */
+
+.hero-unit {
+  background-color: white;
+  padding-top: 15px;
+  margin-bottom: -20px;
+}
+
+.thumbnail-container {
+  text-align: center;
+  display: inline-block;
+  *display: inline;
+  float: none;
+  position: relative;
+  top: 50%;
+  left: 13%;
 }
 
 /* footer */
@@ -152,6 +170,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   height: auto;
   margin-bottom: 15px;
+  float: center;
 }
 
 #error_explanation {
