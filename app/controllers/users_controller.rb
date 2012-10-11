@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 	def create
   		@user = User.new(params[:user])
   		if @user.save
-  			flash[:success] = "Welcome to Freecycle!"
+  			flash[:success] = "Well done! You've successfully created an account with us"
   			redirect_to @user
 		else
   			render 'new'
