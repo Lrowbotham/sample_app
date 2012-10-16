@@ -62,6 +62,15 @@ p {
   line-height: 1.7em;
 }
 
+l1 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
 /* header */
 
 #logo {
@@ -87,6 +96,22 @@ p {
   background-color: white;
   padding-top: 15px;
   margin-bottom: -20px;
+}
+
+.contact-container {
+  margin-top: none;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px; 
+}
+
+.two-container {
+  display: inline-block;
+  *display: inline;
+  float: none;
+  position: relative;
+  top: 10%;
+  left: 40%;
 }
 
 .thumbnail-container {

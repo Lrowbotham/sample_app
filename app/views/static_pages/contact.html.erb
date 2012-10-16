@@ -1,6 +1,15 @@
 <%= provide(:title, 'Contact') %>
 <h1>Contact</h1>
-<p>
-	Contact me 
-	<a href="http://twitter.com/lrowbotham/">here</a>.
-</p>
+	<div class="contact-container">
+		<h3>Say Hello</h3>
+		<br>
+		<input class="span3" type="text" id="inputName" placeholder="Name"><br>
+		<input class="span3" type="text" id="inputEmail" placeholder="Email"><br>
+		<input class="span3" type="text" id="inputSubject" placeholder="Subject"><br>
+		<textarea class="field span3" rows="4"></textarea><br>
+		<%= link_to "Send message", '#', class: "btn btn-default btn-primary" %>
+		</form>
+	</div>
+		<div class="two-container">
+		<iframe width="325" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Staines&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=6.505674,19.753418&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Staines-upon-Thames,+Surrey,+United+Kingdom&amp;ll=51.43148,-0.515525&amp;spn=0.001639,0.004823&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Staines&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=6.505674,19.753418&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Staines-upon-Thames,+Surrey,+United+Kingdom&amp;ll=51.43148,-0.515525&amp;spn=0.001639,0.004823&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	</div>
