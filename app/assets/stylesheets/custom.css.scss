@@ -62,13 +62,32 @@ p {
   line-height: 1.7em;
 }
 
-l1 {
+sh1 {
+  font-size: 2.5em;
+  letter-spacing: -2px;
+}
+
+sth1 {
+    font-size: 2.0em;
+  letter-spacing: -2px;
+}
+
+sth2 {
   font-size: 1.7em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
   font-weight: normal;
   color: $grayLight;
+}
+
+sthh2 {
+  font-size: 2.0em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  &:hover {
+    color: #0088cc;
+    text-decoration: none;
+  }
 }
 
 /* header */
@@ -98,38 +117,21 @@ l1 {
   margin-bottom: -20px;
 }
 
-.contact-container {
-  margin-top: none;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px; 
-}
-
-.two-container {
-  display: inline-block;
-  *display: inline;
-  float: none;
-  position: relative;
-  top: 10%;
-  left: 40%;
-}
-
-.thumbnail-container {
-  text-align: center;
-  display: inline-block;
-  *display: inline;
-  float: none;
-  position: relative;
-  top: 50%;
-  left: 13%;
-}
-
 .well {
   padding-top: 1px;
   padding-bottom: 1px;
   margin-top: 1px;
   margin-bottom: -10px;
   text-color: #049cdb;
+}
+
+.verticalDivider {
+     border-left:1px solid #262626; 
+     height: 310px;
+     position:absolute;
+     left: 435px;
+     top:130px; 
+     opacity: 0.4;
 }
 
 /* footer */
