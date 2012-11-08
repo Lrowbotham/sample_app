@@ -32,6 +32,13 @@ describe User do
 		end	
 	end
 
+	describe "with admin attributes set to 'true'" do
+		before { @user.toggle!(:admin) }
+
+		it { should be_admin }
+	end
+
+
 	describe "when name is not present" do
 		before { @user.name = " " }
 		it { should_not be_valid }
@@ -46,16 +53,6 @@ describe User do
 		before { @user.name = "a" * 27 }
 		it { should_not be_valid }
 	end
-
-	describe "when name includes invalid characters" do
-		it "should be invalid" do
-		names = %w[Only_share Only Share Share Only only share admin]
-		names.each do |invalid_names|
-			@user.name = invalid_names
-			@user.should_not be_valid
-		end
-	end
-end
 
 	describe "when email format is invalid" do
 		it "should be invalid" do
