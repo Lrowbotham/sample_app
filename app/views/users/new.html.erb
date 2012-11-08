@@ -6,7 +6,7 @@
 
 	<%= form_for(@user) do |f| %>
 
-		<%= render 'shared/error_messages' %>
+		<%= render 'shared/error_messages', object: @user %>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 
@@ -18,13 +18,12 @@
 
 		<%= f.label :password_confirmation, "Confirmation" %>
 		<%= f.password_field :password_confirmation %>
-		<label class="checkbox">
-			<input type="checkbox" value ="1"><small>Yes, I have read and agree to the <a href="/conditions">Terms & Conditions.</a></small>
-		</label>
-	<br>
+
 		<div class="center row">
 		<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 		</div>
+	<br>
+		<div class="center row"><small>By clicking 'create my account' you agree to our <a href="/conditions">Terms & Conditions.</a></small></div>
 		<% end %>
 	</div>
 </div>

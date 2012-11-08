@@ -1,76 +1,91 @@
-<div class="center hero-unit">
-	<h1>Sharing, made easy.</h1>
-	<p>
-		Only Share is a free online tool created for people to easily share items within their community.<br>
-
-		If you're wanting to give or recieve an item today, <a href="/signup">get started</a> here.
-	</p>
-	<%= link_to "Create my account", '/signup', class: "btn btn-large btn-primary" %>
-</div>
-<div class="center row-home">
-    <div class="span12">
-    <div class="span2 offset2"><sthh2><center>Give an item</center></sthh2><a href="/contact"><img src="/give.png" alt="Give an item"></a></div>
-    <div class="span2 offset3"><sthh2><center>Search items</center></sthh2><a href="/contact"><img src="/want.png" alt="Search for an item"></a></div>
+<% if signed_in? %>
+    <div class="row">
+        <aside class="span4">
+            <section>
+                <%= render 'shared/user_info' %>
+            </section>
+            <section>
+                <%= render 'shared/micropost_form' %>
+            </section>
+        </aside>
+            <div class="span8">
+                <h3>Latest Posts</h3>
+                <%= render 'shared/feed' %>
+            </div>
     </div>
-</div>
-<br>
-<div class="row"></div>
-<br>
-<br>
-<div class="row"><center><h2>Take a look at some of our most recent posts</h2></center></div>
-<!-- Items Preview -->
-<div class="row-fluid">
-	<div class="span12">
-	<!-- First Item -->
-    <li class="span3">
-   	    <div class="thumbnail">
-    	   <img src="/drums.jpg" alt="Drum Kit Berkshire">
-        </div>
-        <div class="center row">
-            <h3>Giving</h3>
-            <p>Drum Kit Wokingham<br>
-            <a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
-            </p>
-        </div>
-    </li>
-   	<!-- Second Item -->
-    <li class="span3">
-   	    <div class="thumbnail">
-    	   <img src="/toshibatv.jpg" alt="Television Staines">
-        </div>
-        <div class="center row">
-            <h3>Giving</h3>
-    	       <p>Television Staines<br>
-    		   <a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
-    	       </p>
-        <div>
-    </li>
-    <!-- Third Item -->
-    <li class="span3">
-   	    <div class="thumbnail">
-    	   <img src="/armchair.jpg" alt="Armchair Bracknell">
-        </div>
-        <div class="center row">
-    	   <h3>Wanting</h3>
-    	   <p>Sofa Bracknell<br>
-    		<a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
-    	   </p>
-        </div>
-    </li>
-    <!-- Fourth Item -->
-    <li class="span3">
-        <div class="thumbnail">
-            <img src="/lawnm.jpg" alt="Lawn mower Berkshire">
-        </div>
-        <div class="center row">
-            <h3>Giving</h3>
-            <p>Lawn Mower Berkshire<br>
-            <a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
-           </p>
-        </div>
+<% else %>
+    <div class="center hero-unit">
+    	<h1>Sharing, made easy.</h1>
+    	<p>
+    		Only Share is a free online tool created for people to easily share items within their community.<br>
 
-    </li>
-</div>
-</ul>
-</div>
-<br>
+    		If you're wanting to give or recieve an item today, <a href="/signup">get started</a> here.
+    	</p>
+    	<%= link_to "Create my account", '/signup', class: "btn btn-large btn-primary" %>
+    </div>
+    <div class="center row-home">
+        <div class="span12">
+        <div class="span2 offset2"><sthh2><center>Give an item</center></sthh2><a href="/contact"><img src="/give.png" alt="Give an item"></a></div>
+        <div class="span2 offset3"><sthh2><center>Search items</center></sthh2><a href="/contact"><img src="/want.png" alt="Search for an item"></a></div>
+        </div>
+    </div>
+    <br>
+    <div class="row"></div>
+    <br>
+    <br>
+    <div class="row"><center><h2>Take a look at some of our most recent posts</h2></center></div>
+    <!-- Items Preview -->
+    <div class="row-fluid">
+    	<div class="span12">
+    	<!-- First Item -->
+        <li class="span3">
+       	    <div class="thumbnail">
+        	   <img src="/drums.jpg" alt="Drum Kit Berkshire">
+            </div>
+            <div class="center row">
+                <h3>Giving</h3>
+                <p>Drum Kit Wokingham<br>
+                <a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
+                </p>
+            </div>
+        </li>
+       	<!-- Second Item -->
+        <li class="span3">
+       	    <div class="thumbnail">
+        	   <img src="/toshibatv.jpg" alt="Television Staines">
+            </div>
+            <div class="center row">
+                <h3>Giving</h3>
+        	       <p>Television Staines<br>
+        		   <a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
+        	       </p>
+            <div>
+        </li>
+        <!-- Third Item -->
+        <li class="span3">
+       	    <div class="thumbnail">
+        	   <img src="/armchair.jpg" alt="Armchair Bracknell">
+            </div>
+            <div class="center row">
+        	   <h3>Wanting</h3>
+        	   <p>Sofa Bracknell<br>
+        		<a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
+        	   </p>
+            </div>
+        </li>
+        <!-- Fourth Item -->
+        <li class="span3">
+            <div class="thumbnail">
+                <img src="/lawnm.jpg" alt="Lawn mower Berkshire">
+            </div>
+            <div class="center row">
+                <h3>Giving</h3>
+                <p>Lawn Mower Berkshire<br>
+                <a href="/contact"><button class="btn btn-mini btn-info" type="button">More Info</button></a>
+               </p>
+            </div>
+        </li>
+    </div>
+    </ul>
+    </div>
+<% end %>

@@ -5,15 +5,15 @@
 	<div class="span6 offset3">
 
 	<div class="row-fixed">
-		<%= gravatar_for @user %>
-		<a href="http://gravatar.com/emails" target="_blank">Change</a>
+		<%= gravatar_for @user, size: 60 %>
+		<a href="http://gravatar.com/emails" target="_blank">Change avatar</a>
 	</div>
 	<br>
 	<br>
 	<br>	
 	<%= form_for(@user) do |f| %>
 
-		<%= render 'shared/error_messages' %>
+		<%= render 'shared/error_messages', object: @user %>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 
